@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ingresar DNI | Twins Dragon</title>
+
+    <link rel="stylesheet" href="css/dni.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<section class="dni">
+
+    <div class="overlay">
+
+        <div class="contenedor">
+
+            <img src="Imagenes/Logo.png" class="logo" alt="Logo">
+
+            <h1>Ingrese su DNI</h1>
+
+            <p>Para continuar con su reserva.</p>
+
+            <input
+                type="text"
+                id="dni"
+                maxlength="8"
+                placeholder="Ingrese su DNI"
+            >
+
+            <div class="botones">
+
+                <button class="continuar" onclick="validarDNI()">
+                    Continuar
+                </button>
+
+                <a href="index.html" class="volver">
+                    Volver
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <img src="Imagenes/Logo.png" alt="Logo">
+
+    </div>
+
+    <div class="footer-info">
+
+        <h3>ACERCA DE TWINS DRAGONS</h3>
+
+        <ul>
+            <li>UNA COCINA QUE DESPIERTA SENTIDOS Y CONECTA CULTURAS</li>
+            <li>HORARIOS Y SEDES</li>
+            <li>UBÍCANOS</li>
+        </ul>
+
+    </div>
+
+    <div class="footer-libro">
+
+        <h3>MÁS INFORMACIÓN</h3>
+
+        <div class="libro">
+
+            <img src="Imagenes/libro.png" alt="Libro">
+
+            <span>Libro de Reclamaciones</span>
+
+        </div>
+
+    </div>
+
+    <div class="footer-redes">
+
+        <div class="iconos">
+
+            <a href="#"><img src="Imagenes/instagram.png" alt="Instagram"></a>
+
+            <a href="#"><img src="Imagenes/facebook.png" alt="Facebook"></a>
+
+            <a href="#"><img src="Imagenes/whatsapp.png" alt="WhatsApp"></a>
+
+        </div>
+
+        <div class="botones-footer">
+
+            <a href="dni.html" class="btn-footer">RESERVAR</a>
+
+            <a href="#" class="btn-footer">VER CARTA</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+  function validarDNI(){
+
+    const dni = document.getElementById("dni").value;
+
+    const usuarios = {
+
+        "75800759":{
+
+            nombre:"Carlos Daniel Portal",
+
+            correo:"carlosportal@gmail.com",
+
+            telefono:"954705945"
+
+        },
+
+        "28271666":{
+
+            nombre:"Zory De la Cruz",
+
+            correo:"Zory@gmail.com",
+
+            telefono:"958462153"
+
+        },
+
+        "15975312":{
+
+            nombre:"Juan Pascal",
+
+            correo:"Juan@gmail.com",
+
+            telefono:"75486912"
+
+        }
+
+    };
+
+    if(usuarios[dni]){
+
+        localStorage.setItem("usuario",JSON.stringify(usuarios[dni]));
+
+        window.location.href="reserva.html";
+
+    }else{
+
+        alert("❌ El DNI ingresado no existe.");
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

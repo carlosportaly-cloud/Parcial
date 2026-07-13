@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.login{
+
+    min-height:100vh;
+
+    background:url("../Imagenes/Fondo.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.overlay{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.contenedor{
+
+    background:#fff;
+
+    width:420px;
+
+    border-radius:15px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+.logo{
+
+    width:120px;
+
+    margin-bottom:20px;
+
+}
+
+h1{
+
+    color:#b22222;
+
+    margin-bottom:10px;
+
+}
+
+p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:18px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.botones{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.ingresar,
+.volver{
+
+    flex:1;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.ingresar{
+
+    background:#d4af37;
+
+}
+
+.ingresar:hover{
+
+    background:#c49d26;
+
+}
+
+.volver{
+
+    background:#b22222;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.volver:hover{
+
+    background:#8b1b1b;
+
+}

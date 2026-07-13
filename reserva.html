@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reserva | Twins Dragons</title>
+
+    <link rel="stylesheet" href="css/reserva.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<section class="reserva">
+
+    <div class="overlay">
+
+        <div class="contenedor">
+
+            <img src="Imagenes/Logo.png" class="logo" alt="Logo">
+
+            <h1>RESERVAR MESA "TWINS DRAGONS"</h1>
+
+            <form>
+
+                <label>Nombre</label>
+                <input type="text" id="nombre" readonly>
+
+                <label>Correo</label>
+                <input type="email" id="correo" readonly>
+
+                <label>Teléfono</label>
+                <input type="text" id="telefono" readonly>
+
+                <label>Fecha</label>
+                <button type="button" class="campo-btn" id="btnFecha">
+                    Seleccionar Fecha
+                </button>
+
+                <label>Hora</label>
+                <button type="button" class="campo-btn" id="btnHora">
+                    Seleccionar Hora
+                </button>
+
+                <label>Mesa</label>
+                <button type="button" class="campo-btn" id="btnMesa">
+                    Seleccionar Mesa
+                </button>
+
+                <label>Personas</label>
+                <button type="button" class="campo-btn" id="btnPersonas">
+                    Seleccionar Personas
+                </button>
+
+                <div class="acciones">
+
+                    <button type="button" class="reservar" id="btnReservar">
+    Reservar
+</button>
+
+                    <a href="dni.html" class="cancelar">
+                        Cancelar
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================== MODAL FECHA ====================== -->
+
+<!-- ====================== MODAL FECHA ====================== -->
+
+<div class="modal" id="modalFecha">
+
+    <div class="modal-contenido">
+
+        <span class="cerrar">&times;</span>
+
+        <h2>Julio 2026</h2>
+
+        <div class="calendario">
+
+            <div class="dia-nombre">L</div>
+            <div class="dia-nombre">M</div>
+            <div class="dia-nombre">M</div>
+            <div class="dia-nombre">J</div>
+            <div class="dia-nombre">V</div>
+            <div class="dia-nombre">S</div>
+            <div class="dia-nombre">D</div>
+
+            <div></div>
+            <div class="dia">1</div>
+            <div class="dia">2</div>
+            <div class="dia">3</div>
+            <div class="dia">4</div>
+            <div class="dia">5</div>
+            <div class="dia">6</div>
+
+            <div class="dia">7</div>
+            <div class="dia">8</div>
+            <div class="dia">9</div>
+            <div class="dia">10</div>
+            <div class="dia">11</div>
+            <div class="dia">12</div>
+            <div class="dia">13</div>
+
+            <div class="dia">14</div>
+            <div class="dia">15</div>
+            <div class="dia">16</div>
+            <div class="dia">17</div>
+            <div class="dia">18</div>
+            <div class="dia">19</div>
+            <div class="dia">20</div>
+
+            <div class="dia">21</div>
+            <div class="dia">22</div>
+            <div class="dia">23</div>
+            <div class="dia">24</div>
+            <div class="dia">25</div>
+            <div class="dia">26</div>
+            <div class="dia">27</div>
+
+            <div class="dia">28</div>
+            <div class="dia">29</div>
+            <div class="dia">30</div>
+            <div class="dia">31</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ====================== MODAL HORA ====================== -->
+
+<div class="modal" id="modalHora">
+
+    <div class="modal-contenido">
+
+        <span class="cerrar">&times;</span>
+
+        <h2>Seleccione una hora</h2>
+
+        <div class="contenido-modal">
+
+            <button class="opcionHora">12:00 PM</button>
+            <button class="opcionHora">01:00 PM</button>
+            <button class="opcionHora">02:00 PM</button>
+            <button class="opcionHora">03:00 PM</button>
+            <button class="opcionHora">04:00 PM</button>
+            <button class="opcionHora">05:00 PM</button>
+            <button class="opcionHora">06:00 PM</button>
+            <button class="opcionHora">07:00 PM</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ====================== MODAL MESA ====================== -->
+
+<div class="modal" id="modalMesa">
+
+    <div class="modal-contenido">
+
+        <span class="cerrar">&times;</span>
+
+        <h2>Seleccione una Mesa</h2>
+
+        <div class="plano-mesas">
+
+            <button class="mesa disponible">Mesa 1</button>
+            <button class="mesa disponible">Mesa 2</button>
+
+            <button class="mesa ocupada" disabled>Mesa 3</button>
+            <button class="mesa disponible">Mesa 4</button>
+
+            <button class="mesa disponible">Mesa 5</button>
+            <button class="mesa ocupada" disabled>Mesa 6</button>
+
+            <button class="mesa disponible">Mesa 7</button>
+            <button class="mesa disponible">Mesa 8</button>
+
+        </div>
+
+        <br>
+
+        <p style="text-align:center;">
+            🟢 Disponible &nbsp;&nbsp;&nbsp; 🔴 Ocupada
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ====================== MODAL PERSONAS ====================== -->
+
+<div class="modal" id="modalPersonas">
+
+    <div class="modal-contenido">
+
+        <span class="cerrar">&times;</span>
+
+        <h2>Seleccione Personas</h2>
+
+        <div class="contenido-modal">
+
+            <button class="persona">1</button>
+            <button class="persona">2</button>
+            <button class="persona">3</button>
+            <button class="persona">4</button>
+            <button class="persona">5</button>
+            <button class="persona">6</button>
+            <button class="persona">7</button>
+            <button class="persona">8</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/reserva.js"></script>
+
+</body>
+
+</html>
